@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Exercise</title>
+</head>
+<body>
+<h1>JavaScript Exercise</h1>
+<form>
+  <div>Enter one or more symbols to track: <input type="text" id="symbols" value=""/></div>
+  <div>
+    <input type="button" onclick="do_quote()" id="updateNow" value="Update Now"/>
+    <input type="button" onclick="clear_table()" id="clearHistory" value="Clear History"/>
+  </div>
+  <input type="button" onclick="startStopFunction()" id="startStop" value="Start Automatic Updates"/>
+  <select id="refreshInterval" onchange="do_onSelect()">
+    <option value="5">Every 5 Seconds</option>
+    <option value="10">Every 10 Seconds</option>
+    <option value="15">Every 15 Seconds</option>
+    <option value="20">Every 20 Seconds</option>
+    <option value="25">Every 25 Seconds</option>
+  </select>
+</form>
+<div><input type="text" id="updateCount" value="5" readonly/> seconds until next update</div>
+<h2>Quote Information</h2>
+<div>This data is current as of <input type="text" id="current" value=""/></div>
+<table id="myTable" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>Symbol</th>
+    <th>Price</th>
+    <th>Price Date</th>
+  </tr>
+</table>
+<script src="Quote.js"></script>
+</body>
+</html>
